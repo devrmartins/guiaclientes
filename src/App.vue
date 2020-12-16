@@ -18,15 +18,18 @@ export default {
       clientes: [
         {
           nome: "Raffael",
-          showProdutos: false,
+          showProdutos: true,
+          isPremium: true,
         },
         {
           nome: "Marianna",
           showProdutos: true,
+          isPremium: false,
         },
         {
           nome: "Marina",
           showProdutos: false,
+          isPremium: true,
         },
       ],
     };
