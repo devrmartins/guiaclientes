@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <Cliente nome="Marianna"></Cliente>
-    <Cliente nome="Raffael"></Cliente>
-    <Cliente nome="Marina"></Cliente>
+    <Cliente
+      v-for="cliente in clientes"
+      :key="cliente.nome"
+      :nome="cliente.nome"
+    />
   </div>
 </template>
 
@@ -11,6 +13,21 @@ import Cliente from "./components/Cliente";
 export default {
   name: "App",
   components: { Cliente },
+  data() {
+    return {
+      clientes: [
+        {
+          nome: "Raffael",
+        },
+        {
+          nome: "Marianna",
+        },
+        {
+          nome: "Marina",
+        },
+      ],
+    };
+  },
 };
 </script>
 
