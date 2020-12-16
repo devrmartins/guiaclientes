@@ -1,24 +1,14 @@
 <template>
   <div id="cliente" :class="{ isPremium: cliente.isPremium }">
     <h2>{{ cliente.nome }}</h2>
-    <Produto v-if="cliente.showProdutos"></Produto>
-    <button @click="changeColor(cliente)" class="action">Action</button>
+    <h4>{{ cliente.email }}</h4>
   </div>
 </template>
 <script>
-import Produto from "./Produto";
 export default {
   name: "Cliente",
-  components: {
-    Produto,
-  },
   props: {
     cliente: Object,
-  },
-  methods: {
-    changeColor(cliente) {
-      cliente.isPremium = !cliente.isPremium;
-    },
   },
 };
 </script>
@@ -35,14 +25,5 @@ export default {
 }
 #cliente.isPremium h2 {
   color: #b79413;
-}
-.action {
-  padding: 5px;
-  background-color: #000;
-  color: #fff;
-  border: none !important;
-  cursor: pointer;
-  border-radius: 3px;
-  margin: 10px 0;
 }
 </style>
