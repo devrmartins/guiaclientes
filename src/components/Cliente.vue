@@ -1,7 +1,7 @@
 <template>
   <div id="cliente">
-    <h2>{{ nome }}</h2>
-    <Produto></Produto>
+    <h2>{{ cliente.nome }}</h2>
+    <Produto v-if="cliente.showProdutos"></Produto>
   </div>
 </template>
 <script>
@@ -12,7 +12,7 @@ export default {
     Produto,
   },
   props: {
-    nome: String,
+    cliente: Object,
   },
 };
 </script>

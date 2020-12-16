@@ -3,7 +3,7 @@
     <Cliente
       v-for="cliente in clientes"
       :key="cliente.nome"
-      :nome="cliente.nome"
+      :cliente="cliente"
     />
   </div>
 </template>
@@ -18,12 +18,15 @@ export default {
       clientes: [
         {
           nome: "Raffael",
+          showProdutos: false,
         },
         {
           nome: "Marianna",
+          showProdutos: true,
         },
         {
           nome: "Marina",
+          showProdutos: false,
         },
       ],
     };
@@ -37,6 +40,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
